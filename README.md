@@ -2,6 +2,7 @@
  An interview screening question
  
  Email:
+ 
 ![Email Question](https://raw.githubusercontent.com/ZacharyMcGee/reward-points/master/images/email.png)
 ## Goal
 Create a program that can calculate points based on transactions.
