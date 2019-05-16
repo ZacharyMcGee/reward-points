@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Rewards Program</title>
+  <meta name="description" content="Rewards Program">
+  <meta name="author" content="Zachary McGee">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <a href=""><img src="images/logo.png"/></a>
+    </div>
+    <div class="sidebar-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="#" onclick="generateDataset()">Generate Dataset</a>
+        <a href="#" onclick="viewDataset()">View Dataset JSON</a>
+        <a href="#" onclick="viewNamelist()">View Name List</a>
+        <a href="#" onclick="calculateReward()">Calculate Points</a>
+        <a href="#" onclick="openSettings()">Settings</a>
+    </div>
+</div>
+
+  <div class="header">
+    <div class="search-bar">
+      <input id="search" type="text" placeholder="Search Customers..." name="search">
+      <button type="submit" id="searchButton" onclick="clearSearch()"><i class="fa fa-search"></i></button>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://github.com/ZacharyMcGee/reward-points/blob/master/README.md">About</a></li>
+      <li><a href="https://github.com/ZacharyMcGee/reward-points">Source Code</a></li>
+    </ul>
+  </div>
+
+<div class="content" id="content">
+  <div class="full-card">
+    <div class="card-title">
+      <p><i class="fas fa-history" style="padding-right:5px;"></i> 3 Month Transaction Dataset</p>
+    </div>
+    <div class="card-body" style="max-height:300px; overflow-y: scroll; width:100%;">
+      <table id="transaction-table" class="transaction-table"></table>
+    </div>
+  </div>
+
+  <div class="full-card" style="margin-top: 20px;">
+    <div class="card-title">
+      <p><i class="fas fa-users" style="padding-right:5px;"></i> Reward Breakdown by Customer</p>
+    </div>
+    <div class="card-body" style="max-height:300px; overflow-y: scroll; width:100%;">
+      <table id="customer-table" class="transaction-table"></table>
+    </div>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div id="modalTitle" class="modal-title">
+
+  </div>
+  <div id="modalContent" class="modal-content">
+
+  </div>
+</div>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="js/rewards.js"></script>
+</body>
+</html>
